@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include "HuffmanCoding.h" // Make sure to have the HuffmanCoding class code in this header file
+
+int main() {
+    std::string path = "sample.txt";
+
+    HuffmanCoding h(path);
+
+    std::string output_path = h.compress();
+    std::cout << "Compressed file path: " << output_path << std::endl;
+
+    std::string decom_path = h.decompress(output_path);
+    std::cout << "Decompressed file path: " << decom_path << std::endl;
+
+    return 0;
+}
